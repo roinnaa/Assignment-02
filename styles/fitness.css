@@ -1,0 +1,579 @@
+/* General Styles */
+
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #000;
+    color: #fff;
+    line-height: 1.6;
+}
+h2, h3 {
+    margin-bottom: 15px;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+.menu-checkbox,
+.menu-icon-label {
+    display: none;
+}
+
+/* Header Section */
+
+.header {
+    background: linear-gradient(to bottom, #141414, #000);
+    padding: 20px;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo {
+    font-size: 2rem;
+    color: #FF502F;
+    font-weight: bold;
+}
+.nav-links {
+    list-style-type: none;
+    display: flex;
+    gap: 30px;
+    transition: all 0.3s ease;
+}
+.nav-item {
+    color: #fff;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+.nav-item:hover {
+    color: #FF502F;
+}
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+}
+.menu-icon {
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: relative;
+}
+.menu-icon::before,
+.menu-icon::after {
+    content: '';
+    width: 25px;
+    height: 2px;
+    background-color: #fff;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+}
+.menu-icon::before {
+    top: -8px;
+}
+.menu-icon::after {
+    top: 8px;
+}
+
+/* Hero Section */
+
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.hero-text {
+    max-width: 600px;
+}
+.hero-text h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero-text .italic {
+    font-style: italic;
+    font-family: 'Brush Script MT', cursive;
+    color: #fff;
+}
+.hero-text p {
+    margin-bottom: 30px;
+    font-size: 1.2rem;
+    line-height: 1.5;
+    color: #b5b5b5;
+}
+.hero-buttons {
+    display: flex;
+    gap: 20px;
+}
+.btn-primary, .btn-secondary {
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.btn-primary {
+    background-color: #FF502F;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+.btn-primary:hover {
+    background-color: #e64628;
+}
+.btn-secondary {
+    background-color: transparent;
+    border: 2px solid #FF502F;
+    color: #FF502F;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn-secondary:hover {
+    background-color: #FF502F;
+    color: #fff;
+}
+.hero-image img {
+    max-width: 450px;
+    height: auto;
+}
+
+/* Change Your Habits Section */
+
+.habits {
+    text-align: center;
+    padding: 50px 0;
+}
+.habits-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+.habit-item {
+    text-align: center;
+}
+.habit-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+/* Run an Extra Mile Section */
+
+.extra-mile {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+    background: #1a1a1a;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+.extra-mile-content {
+    max-width: 500px;
+}
+.extra-mile-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
+    color: #ffffff;
+}
+.extra-mile-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #b5b5b5;
+}
+.extra-mile-image {
+    max-width: 400px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.extra-mile-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Trainings and Exercises Section */
+
+.trainings {
+    text-align: center;
+    padding: 50px 0;
+}
+.trainings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.training-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.training-item h3 {
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: #fff;
+}
+
+/* BMI Calculator Section */
+
+.bmi-calculator {
+    padding: 50px 0;
+    background: #1a1a1a;
+    text-align: center;
+}
+.bmi-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 30px auto;
+}
+.bmi-chart, .bmi-form {
+    background: #2a2a2a;
+    padding: 30px;
+    border-radius: 10px;
+}
+.bmi-chart h3, .bmi-form h3 {
+    margin-bottom: 20px;
+    color: #fff;
+}
+.bmi-chart table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.bmi-chart th, .bmi-chart td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #444;
+    color: #fff;
+}
+.bmi-form input, .bmi-form select {
+    width: 100%;
+    padding: 12px 15px;
+    margin-bottom: 15px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background-color: #333;
+    color: #ffffff;
+    box-sizing: border-box; 
+}
+.bmi-form select {
+    height: 45px;
+}
+.bmi-form button {
+    width: 100%;
+    padding: 15px;
+    background-color: #FF502F;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+.bmi-form button:hover {
+    background-color: #e64628;
+}
+
+/* Meet Our Team Section */
+
+.team {
+    text-align: center;
+    padding: 50px 0;
+}
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.team-member img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+.team-member h3 {
+    margin-top: 10px;
+    color: #fff;
+}
+.team-member p {
+    color: #b5b5b5;
+}
+
+/* Common Styles for Grids */
+
+.grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Team Section */
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.team-member {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.team-member img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Trainings Section */
+
+.trainings-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+.training-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.training-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Footer Section */
+
+.footer {
+    background: #1a1a1a;
+    color: #b5b5b5;
+    padding: 50px 0;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.footer-logo {
+    max-width: 300px;
+}
+.footer-logo h2 {
+    color: #FF502F;
+}
+.footer-logo p {
+    margin-top: 15px;
+}
+.footer-links {
+    text-align: left;
+}
+.footer-links h3 {
+    color: #fff;
+    margin-bottom: 10px;
+}
+.footer-links ul {
+    list-style-type: none;
+}
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+.footer-links ul li a:hover {
+    color: #FF502F;
+    transition: color 0.3s ease;
+}
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+}
+.hero-section,
+.extra-mile,
+.habits,
+.trainings,
+.team,
+.bmi-calculator,
+.extra-mile {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+/* Responsive Medium Devices */
+
+@media screen and (max-width: 576px) {
+    .navbar .nav-links {
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #141414;
+        width: 100%;
+        display: none;
+        padding: 15px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    }
+    .menu-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+    .menu-icon-label {
+        cursor: pointer;
+        display: block;
+        background: none;
+        padding: 0;
+        border: none;
+    }
+    .menu-icon {
+        width: 30px;
+        height: 30px;
+        background: none;
+    }
+    .menu-checkbox {
+        display: none;
+    }
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+    .hero-image img {
+        max-width: 100%;
+    }
+    .habits-grid,
+    .trainings-grid,
+    .team-grid,
+    .bmi-grid {
+        grid-template-columns: 1fr;
+    }
+    .extra-mile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .extra-mile-content {
+        max-width: 100%;
+    }
+    .extra-mile-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .footer-content {
+        flex-direction: column;
+        text-align: left;
+        padding: 20px;
+    }
+    .footer-logo {
+        margin-bottom: 20px;
+    }
+    .footer-links {
+        margin-bottom: 20px;
+    }
+    .footer-links h3 {
+        margin-bottom: 10px;
+        color: #fff;
+    }
+    .footer-links ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    .footer-links ul li {
+        margin-bottom: 8px;
+    }
+    .footer-links ul li a {
+        color: #b5b5b5;
+    }
+    .footer-links ul li a:hover {
+        color: #FF502F;
+    }
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Responsive Medium Devices */
+
+@media screen and (min-width: 576px) and (max-width: 992px) {
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+    .hero-text {
+        max-width: 600px;
+        margin-bottom: 20px;
+    }
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        margin-top: 20px;
+    }
+    .hero-image {
+        max-width: 100%;
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+    }
+    .hero-image img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+    .habits-grid,
+    .trainings-grid,
+    .team-grid,
+    .bmi-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .extra-mile {
+        flex-direction: column;
+        text-align: center;
+    }
+    .extra-mile-content {
+        max-width: 100%;
+    }
+    .extra-mile-image {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .team-grid,
+    .trainings-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    .footer-content {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .menu-checkbox,
+    .menu-icon-label {
+        display: none;
+    }
+}
